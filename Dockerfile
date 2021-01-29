@@ -15,7 +15,7 @@ RUN git clone https://github.com/coolsnowwolf/lede
 WORKDIR /lede
 # 安装插件
 # OpenClash，这鬼玩意贼大，只能用fetch去安装
-RUN mkdir package/luci-app-openclash && cd package/luci-app-openclash && git init && git remote add -f origin https://github.com/vernesong/OpenClash.git && git fetch
+RUN mkdir package/luci-app-openclash && cd package/luci-app-openclash && git init && git remote add -f origin https://github.com/vernesong/OpenClash.git && git fetch && git checkout master
 # 广告过滤
 RUN  git clone https://github.com/rufengsuixing/luci-app-adguardhome.git package/luci-app-adguardhome
 # 主题 luci-theme-argon

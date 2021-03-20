@@ -37,5 +37,5 @@ make -j$(($(nproc) + 1)) V=s
 编译完成之后可以通过命令把固件拷贝到宿主机上面
 
 ~~~
-docker cp ${CONTAINER ID}:/lede/bin/targets/x86/64/*.img .
+docker cp registry.cn-hangzhou.aliyuncs.com/tianzeng/openwrt_build:/lede/bin/targets/x86/64/*.img .
 ~~~
